@@ -1,4 +1,4 @@
-import 'package:fashion_app/screens/splash/splash.dart';
+import 'package:fashion_app/screens/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
