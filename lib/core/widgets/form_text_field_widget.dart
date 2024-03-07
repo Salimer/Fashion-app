@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class LoginTextFieldWidget extends StatefulWidget {
+class FormTextFieldWidget extends StatefulWidget {
   final String inputPlaceholder;
   final Widget? firstIcon;
   final Widget? secondIcon;
   
-  const LoginTextFieldWidget({super.key, required this.inputPlaceholder, this.firstIcon, this.secondIcon});
+  const FormTextFieldWidget({super.key, required this.inputPlaceholder, this.firstIcon, this.secondIcon});
 
   @override
-  State<LoginTextFieldWidget> createState() => _LoginTextFieldWidgetState();
+  State<FormTextFieldWidget> createState() => _FormTextFieldWidgetState();
 }
 
-class _LoginTextFieldWidgetState extends State<LoginTextFieldWidget> {
+class _FormTextFieldWidgetState extends State<FormTextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return TextField(

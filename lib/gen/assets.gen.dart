@@ -27,9 +27,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/backk.png
   AssetGenImage get backk => const AssetGenImage('assets/images/backk.png');
 
-  /// File path: assets/images/backkk.png
-  AssetGenImage get backkk => const AssetGenImage('assets/images/backkk.png');
-
   /// File path: assets/images/backkkk.png
   AssetGenImage get backkkk => const AssetGenImage('assets/images/backkkk.png');
 
@@ -114,6 +111,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/mobile.png
   AssetGenImage get mobile => const AssetGenImage('assets/images/mobile.png');
 
+  /// File path: assets/images/signUpBack.png
+  AssetGenImage get signUpBack =>
+      const AssetGenImage('assets/images/signUpBack.png');
+
   /// File path: assets/images/splashBack.png
   AssetGenImage get splashBack =>
       const AssetGenImage('assets/images/splashBack.png');
@@ -128,7 +129,6 @@ class $AssetsImagesGen {
         apple,
         backcc,
         backk,
-        backkk,
         backkkk,
         backkkkk,
         bb,
@@ -156,6 +156,7 @@ class $AssetsImagesGen {
         login,
         loginBack,
         mobile,
+        signUpBack,
         splashBack,
         underc
       ];

@@ -1,5 +1,5 @@
 import 'package:fashion_app/core/constants/colors.dart';
-import 'package:fashion_app/features/login/presentation/widgets/login_text_field_widget.dart';
+import 'package:fashion_app/core/widgets/form_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fashion_app/gen/assets.gen.dart';
 
@@ -46,8 +46,8 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: columnGap),
-                      LoginTextFieldWidget(
-                        inputPlaceholder: 'Emailll',
+                      FormTextFieldWidget(
+                        inputPlaceholder: 'Email',
                         firstIcon: Icon(
                           Icons.mail,
                           color: Colors.white,
@@ -56,7 +56,7 @@ class LoginView extends StatelessWidget {
                         secondIcon: null,
                       ),
                       SizedBox(height: columnGap),
-                      LoginTextFieldWidget(
+                      FormTextFieldWidget(
                         inputPlaceholder: 'Password',
                         firstIcon: Icon(
                           Icons.lock,

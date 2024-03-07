@@ -1,5 +1,6 @@
 import 'package:fashion_app/core/constants/colors.dart';
 import 'package:fashion_app/features/login/presentation/views/login_view.dart';
+import 'package:fashion_app/features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:fashion_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: LoginView()
+      home: SignUpView()
     );
   }
 }
