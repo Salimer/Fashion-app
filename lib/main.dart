@@ -1,4 +1,5 @@
-import 'package:fashion_app/features/login_page.dart';
+import 'package:fashion_app/core/constants/colors.dart';
+import 'package:fashion_app/features/login/presentation/views/login_view.dart';
 import 'package:fashion_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -15,18 +16,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: redButton),
         useMaterial3: true,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
+            backgroundColor: redButton,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
           ),
         ),
       ),
-      home: LoginPage()
+      home: LoginView()
     );
   }
 }
