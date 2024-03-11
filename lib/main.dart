@@ -1,4 +1,5 @@
 import 'package:fashion_app/core/constants/colors.dart';
+import 'package:fashion_app/features/home/presentation/views/home_view.dart';
 import 'package:fashion_app/features/login/presentation/views/login_view.dart';
 import 'package:fashion_app/features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:fashion_app/features/splash/presentation/views/splash_view.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
         colorScheme: ColorScheme.fromSeed(seedColor: redButton),
         useMaterial3: true,
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: SignUpView()
+      home: HomeView()
     );
   }
 }
