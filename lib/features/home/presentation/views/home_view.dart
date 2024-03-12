@@ -102,7 +102,8 @@ class HomeView extends StatelessWidget {
                             ),
                             ElevatedButton(
                                 style: ButtonStyle(
-                                  side: MaterialStateProperty.all(BorderSide(color: Colors.white)),
+                                    side: MaterialStateProperty.all(
+                                        BorderSide(color: Colors.white)),
                                     backgroundColor: MaterialStateProperty.all(
                                         Colors.black)),
                                 onPressed: () {},
@@ -119,7 +120,10 @@ class HomeView extends StatelessWidget {
                         child: Row(
                           children: [
                             for (int _ in [1, 2, 3, 4])
-                              ProductCardWidget(productNameColor: Colors.white, productPrice: 'price: \$500',)
+                              ProductCardWidget(
+                                productNameColor: Colors.white,
+                                productPrice: 'price: \$500',
+                              )
                           ],
                         ),
                       ),
@@ -132,8 +136,8 @@ class HomeView extends StatelessWidget {
                             children: [
                               SizedBox(
                                 width: 90,
-                                child: Divider(
-                                    thickness: 3, color: Colors.black),
+                                child:
+                                    Divider(thickness: 3, color: Colors.black),
                               ),
                               Align(
                                 alignment: Alignment.centerLeft,
@@ -155,12 +159,18 @@ class HomeView extends StatelessWidget {
                                 child: GridView(
                                   shrinkWrap: true,
                                   gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                          crossAxisCount: 2),
+                                      SliverGridDelegateWithMaxCrossAxisExtent(
+                                    maxCrossAxisExtent: 200,
+                                    mainAxisExtent: 250,
+                                  ),
                                   children: [
-                                    for(int _ in [1,2,3,4])
-                                    SizedBox(height: 100,
-                                      child: ProductCardWidget(productNameColor: Colors.black, productPrice: '',))
+                                    for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
+                                      SizedBox(
+                                          height: 100,
+                                          child: ProductCardWidget(
+                                            productNameColor: Colors.black,
+                                            productPrice: '',
+                                          ))
                                   ],
                                 ),
                               )
@@ -202,4 +212,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
