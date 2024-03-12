@@ -20,7 +20,7 @@ class ProductCardWidget extends StatelessWidget {
               child: Image.asset(
                 Assets.images.backkkkk.path,
                 width: 135,
-                height: 100,
+                height: 150,
                 fit: BoxFit.cover,
               ),
             ),
