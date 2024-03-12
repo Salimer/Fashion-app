@@ -16,171 +16,172 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     const double columnGap = 15;
     return Scaffold(
-        appBar: _buildAppBar(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Discover the best app',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+      appBar: _buildAppBar(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Discover the best app',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    Text(
+                      'To buy and choose clothes',
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 20,
                       ),
-                      Text(
-                        'To buy and choose clothes',
-                        style: TextStyle(
-                          color: Colors.yellow,
-                          fontSize: 20,
-                        ),
-                      ),
-                      SizedBox(height: columnGap),
-                      SearchBarWidget(),
-                      SizedBox(height: columnGap),
-                      SizedBox(
-                        width: double.infinity,
-                        height: 200,
-                        child: Stack(
-                          children: [
-                            ImageFaderWidget(),
-                            Align(
-                              alignment: Alignment.bottomLeft,
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 6, vertical: 0),
-                                  margin: EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 10),
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                        color: Colors.black,
-                                      )),
-                                  child: Text(
-                                    'Learn More',
-                                    style: TextStyle(
-                                        color: redButton,
-                                        fontSize: 20,
-                                        fontFamily: 'times new roman',
-                                        fontWeight: FontWeight.bold),
-                                  ),
+                    ),
+                    SizedBox(height: columnGap),
+                    SearchBarWidget(),
+                    SizedBox(height: columnGap),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 200,
+                      child: Stack(
+                        children: [
+                          ImageFaderWidget(),
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 6, vertical: 0),
+                                margin: EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 10),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(
+                                      color: Colors.black,
+                                    )),
+                                child: Text(
+                                  'Learn More',
+                                  style: TextStyle(
+                                      color: redButton,
+                                      fontSize: 20,
+                                      fontFamily: 'times new roman',
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
-              SizedBox(height: columnGap),
-              Container(
-                  decoration: BoxDecoration(
-                      color: redButton,
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'New Arrival Collection',
+            ),
+            SizedBox(height: columnGap),
+            Container(
+              decoration: BoxDecoration(
+                  color: redButton, borderRadius: BorderRadius.circular(15)),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'New Arrival Collection',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 255, 251, 0),
+                            fontFamily: 'times new roman',
+                          ),
+                        ),
+                        ElevatedButton(
+                            style: ButtonStyle(
+                                side: MaterialStateProperty.all(
+                                    BorderSide(color: Colors.white)),
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.black)),
+                            onPressed: () {},
+                            child: Text(
+                              'See all',
+                              style: TextStyle(color: Colors.white),
+                            ))
+                      ],
+                    ),
+                  ),
+                  ProductFiltersWidget(),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        for (int _ in [1, 2, 3, 4])
+                          ProductCardWidget(
+                            productNameColor: Colors.white,
+                            productPrice: 'price: \$500',
+                          )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          width: 90,
+                          child: Divider(thickness: 3, color: Colors.black),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Recommended for you',
                               style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 255, 251, 0),
+                                color: Color.fromARGB(255, 0, 0, 0),
                                 fontFamily: 'times new roman',
                               ),
                             ),
-                            ElevatedButton(
-                                style: ButtonStyle(
-                                    side: MaterialStateProperty.all(
-                                        BorderSide(color: Colors.white)),
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Colors.black)),
-                                onPressed: () {},
-                                child: Text(
-                                  'See all',
-                                  style: TextStyle(color: Colors.white),
-                                ))
-                          ],
+                          ),
                         ),
-                      ),
-                      ProductFiltersWidget(),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            for (int _ in [1, 2, 3, 4])
-                              ProductCardWidget(
-                                productNameColor: Colors.white,
-                                productPrice: 'price: \$500',
-                              )
-                          ],
-                        ),
-                      ),
-                      Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Column(
+                        Container(
+                          height: 200,
+                          child: GridView(
+                            shrinkWrap: true,
+                            gridDelegate:
+                                SliverGridDelegateWithMaxCrossAxisExtent(
+                              maxCrossAxisExtent: 200,
+                              mainAxisExtent: 250,
+                            ),
                             children: [
-                              SizedBox(
-                                width: 90,
-                                child:
-                                    Divider(thickness: 3, color: Colors.black),
-                              ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'Recommended for you',
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      fontFamily: 'times new roman',
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: 200,
-                                child: GridView(
-                                  shrinkWrap: true,
-                                  gridDelegate:
-                                      SliverGridDelegateWithMaxCrossAxisExtent(
-                                    maxCrossAxisExtent: 200,
-                                    mainAxisExtent: 250,
-                                  ),
-                                  children: [
-                                    for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
-                                      SizedBox(
-                                          height: 100,
-                                          child: ProductCardWidget(
-                                            productNameColor: Colors.black,
-                                            productPrice: '',
-                                          ))
-                                  ],
-                                ),
-                              )
+                              for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
+                                SizedBox(
+                                    height: 100,
+                                    child: ProductCardWidget(
+                                      productNameColor: Colors.black,
+                                      productPrice: '',
+                                    ))
                             ],
-                          ))
-                    ],
-                  ))
-            ],
-          ),
-        ));
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 
   AppBar _buildAppBar() {
