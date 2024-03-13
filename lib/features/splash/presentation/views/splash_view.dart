@@ -1,5 +1,6 @@
 import 'package:fashion_app/gen/assets.gen.dart';
 import 'package:fashion_app/features/splash/presentation/widgets/splash_button_widget.dart';
+import 'package:fashion_app/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
@@ -61,6 +62,7 @@ class SplashView extends StatelessWidget {
                         borderColor: Colors.black,
                         backgroundColor: Colors.white,
                         textColor: Colors.black,
+                        routeName: homeViewRoute,
                       ),
                       const SizedBox(
                         height: 20,
@@ -70,6 +72,7 @@ class SplashView extends StatelessWidget {
                         borderColor: Colors.white,
                         backgroundColor: Colors.black.withOpacity(0.2),
                         textColor: Colors.white,
+                        routeName: loginViewRoute,
                       ),
                     ],
                   ),
