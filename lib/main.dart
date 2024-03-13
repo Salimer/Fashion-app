@@ -17,6 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: splashViewRoute,
+      routes: {
+        splashViewRoute: (context) => SplashView(),
+        homeViewRoute: (context) => HomeView(),
+        loginViewRoute: (context) => LoginView(),
+        signUpViewRoute: (context) => SignUpView()
+      },
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
         colorScheme: ColorScheme.fromSeed(seedColor: redButton),
@@ -30,7 +37,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: HomeView()
     );
   }
 }
+
+const String splashViewRoute = '/';
+const String homeViewRoute = '/home';
+const String loginViewRoute = '/login';
+const String signUpViewRoute = '/sign_up';
