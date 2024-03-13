@@ -38,6 +38,8 @@ dependencies:
   build_runner: ^2.4.8
   flutter_gen_runner: ^5.4.0
   carousel_slider: ^4.2.1
+  flutter_riverpod: ^2.5.1
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:
