@@ -19,7 +19,6 @@ class SplashButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      // TODO: Change to elevated button
       style: ElevatedButton.styleFrom(
         backgroundColor: backgroundColor,
         minimumSize: Size(double.infinity, 65),
