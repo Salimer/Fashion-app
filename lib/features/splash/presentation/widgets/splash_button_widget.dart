@@ -5,6 +5,7 @@ class SplashButtonWidget extends StatelessWidget {
   final Color borderColor;
   final String text;
   final Color textColor;
+  final String routeName;
 
   const SplashButtonWidget({
     super.key,
@@ -12,6 +13,7 @@ class SplashButtonWidget extends StatelessWidget {
     required this.borderColor,
     required this.text,
     required this.textColor,
+    required this.routeName
   });
 
   @override
@@ -32,7 +34,9 @@ class SplashButtonWidget extends StatelessWidget {
         shadowColor: Colors.grey.withOpacity(1),
         elevation: 2,
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, routeName);
+      },
       child: Text(
         text,
         style: TextStyle(
