@@ -1,13 +1,10 @@
 import 'package:fashion_app/core/constants/colors.dart';
 import 'package:fashion_app/features/home/presentation/widgets/image_fader_widget.dart';
-import 'package:fashion_app/features/home/presentation/widgets/image_switching_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_card_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_filters_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/search_bar_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fashion_app/gen/assets.gen.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -82,7 +79,9 @@ class HomeView extends StatelessWidget {
             SizedBox(height: columnGap),
             Container(
               decoration: BoxDecoration(
-                  color: redButton, borderRadius: BorderRadius.circular(15)),
+                color: redButton,
+                borderRadius: BorderRadius.circular(15),
+              ),
               child: Column(
                 children: [
                   Padding(
@@ -100,16 +99,17 @@ class HomeView extends StatelessWidget {
                           ),
                         ),
                         ElevatedButton(
-                            style: ButtonStyle(
-                                side: MaterialStateProperty.all(
-                                    BorderSide(color: Colors.white)),
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.black)),
-                            onPressed: () {},
-                            child: Text(
-                              'See all',
-                              style: TextStyle(color: Colors.white),
-                            ))
+                          style: ButtonStyle(
+                              side: MaterialStateProperty.all(
+                                  BorderSide(color: Colors.white)),
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.black)),
+                          onPressed: () {},
+                          child: Text(
+                            'See all',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -164,14 +164,15 @@ class HomeView extends StatelessWidget {
                             children: [
                               for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
                                 SizedBox(
-                                    height: 100,
-                                    child: ProductCardWidget(
-                                      productNameColor: Colors.black,
-                                      productPrice: '',
-                                    ))
+                                  height: 100,
+                                  child: ProductCardWidget(
+                                    productNameColor: Colors.black,
+                                    productPrice: '',
+                                  ),
+                                )
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
