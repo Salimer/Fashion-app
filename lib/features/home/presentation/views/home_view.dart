@@ -1,4 +1,5 @@
 import 'package:fashion_app/core/constants/colors.dart';
+import 'package:fashion_app/features/home/presentation/widgets/category_list_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/image_fader_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_card_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_filters_widget.dart';
@@ -154,24 +155,7 @@ class HomeView extends StatelessWidget {
                         ),
                         Container(
                           height: 200,
-                          child: GridView(
-                            shrinkWrap: true,
-                            gridDelegate:
-                                SliverGridDelegateWithMaxCrossAxisExtent(
-                              maxCrossAxisExtent: 200,
-                              mainAxisExtent: 250,
-                            ),
-                            children: [
-                              for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
-                                SizedBox(
-                                  height: 100,
-                                  child: ProductCardWidget(
-                                    productNameColor: Colors.black,
-                                    productPrice: '',
-                                  ),
-                                )
-                            ],
-                          ),
+                          child: CategoryListWidget(),
                         ),
                       ],
                     ),
@@ -182,6 +166,26 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  GridView gridview() {
+    return GridView(
+      shrinkWrap: true,
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        mainAxisExtent: 250,
+      ),
+      children: [
+        for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
+          SizedBox(
+            height: 100,
+            child: ProductCardWidget(
+              productNameColor: Colors.black,
+              productPrice: '',
+            ),
+          )
+      ],
     );
   }
 
