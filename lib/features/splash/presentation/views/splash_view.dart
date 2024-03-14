@@ -1,6 +1,6 @@
+import 'package:fashion_app/core/constants/routes.dart';
 import 'package:fashion_app/gen/assets.gen.dart';
 import 'package:fashion_app/features/splash/presentation/widgets/splash_button_widget.dart';
-import 'package:fashion_app/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
