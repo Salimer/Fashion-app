@@ -1,6 +1,8 @@
 import 'package:fashion_app/core/constants/colors.dart';
+import 'package:fashion_app/core/constants/routes.dart';
 import 'package:fashion_app/features/home/presentation/views/home_view.dart';
 import 'package:fashion_app/features/login/presentation/views/login_view.dart';
+import 'package:fashion_app/features/product_details/presentation/views/product_details_view.dart';
 import 'package:fashion_app/features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:fashion_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -20,15 +22,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: splashViewRoute,
+      initialRoute: productDetailsViewRoute,
       routes: {
-        splashViewRoute: (context) => SplashView(),
-        homeViewRoute: (context) => HomeView(),
-        loginViewRoute: (context) => LoginView(),
-        signUpViewRoute: (context) => SignUpView()
+        splashViewRoute: (context) => const SplashView(),
+        homeViewRoute: (context) => const HomeView(),
+        loginViewRoute: (context) => const LoginView(),
+        signUpViewRoute: (context) => const SignUpView(),
+        productDetailsViewRoute: (context) => const ProductDetailsView()
       },
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),
@@ -48,7 +51,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-const String splashViewRoute = '/';
-const String homeViewRoute = '/home';
-const String loginViewRoute = '/login';
-const String signUpViewRoute = '/sign_up';
+
