@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:fashion_app/gen/assets.gen.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductCardWidget extends StatelessWidget {
   final Color productNameColor;
   final String productPrice;
-  const ProductCardWidget({super.key, required this.productNameColor, required this.productPrice});
+  final String productName;
+  const ProductCardWidget(
+      {super.key,
+      required this.productNameColor,
+      required this.productPrice,
+      required this.productName});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Container(
-         
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
@@ -25,7 +30,11 @@ class ProductCardWidget extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Text('data', style: TextStyle(color: productNameColor)),
+            SizedBox(
+              width: 150,
+              child: Text(productName,
+              overflow: TextOverflow.ellipsis,
+               style: TextStyle(color: productNameColor))),
             Text(
               productPrice,
               style: TextStyle(
