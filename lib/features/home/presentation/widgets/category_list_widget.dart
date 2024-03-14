@@ -1,6 +1,6 @@
 import 'package:fashion_app/features/home/data/models/category_model.dart';
-import 'package:fashion_app/features/home/data/repositories/home_repo.dart';
 import 'package:fashion_app/features/home/presentation/widgets/category_card_widget.dart';
+import 'package:fashion_app/features/home/providers/categories_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
