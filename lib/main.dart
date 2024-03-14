@@ -28,6 +28,10 @@ class MyApp extends StatelessWidget {
         signUpViewRoute: (context) => SignUpView()
       },
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+        ),
         scaffoldBackgroundColor: Colors.black,
         colorScheme: ColorScheme.fromSeed(seedColor: redButton),
         useMaterial3: true,
