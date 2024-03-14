@@ -3,6 +3,7 @@ import 'package:fashion_app/features/home/presentation/widgets/category_list_wid
 import 'package:fashion_app/features/home/presentation/widgets/image_fader_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_card_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/product_filters_widget.dart';
+import 'package:fashion_app/features/home/presentation/widgets/product_list_widget.dart';
 import 'package:fashion_app/features/home/presentation/widgets/search_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fashion_app/gen/assets.gen.dart';
@@ -15,6 +16,9 @@ class HomeView extends StatelessWidget {
     const double columnGap = 15;
     return Scaffold(
       appBar: _buildAppBar(),
+      drawer: Drawer(
+        
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -115,18 +119,7 @@ class HomeView extends StatelessWidget {
                     ),
                   ),
                   ProductFiltersWidget(),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        for (int _ in [1, 2, 3, 4])
-                          ProductCardWidget(
-                            productNameColor: Colors.white,
-                            productPrice: 'price: \$500',
-                          )
-                      ],
-                    ),
-                  ),
+                  ProductListWidget(),
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -169,25 +162,9 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  GridView gridview() {
-    return GridView(
-      shrinkWrap: true,
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
-        mainAxisExtent: 250,
-      ),
-      children: [
-        for (int _ in [1, 2, 3, 4, 5, 6, 7, 8])
-          SizedBox(
-            height: 100,
-            child: ProductCardWidget(
-              productNameColor: Colors.black,
-              productPrice: '',
-            ),
-          )
-      ],
-    );
-  }
+
+
+
 
   AppBar _buildAppBar() {
     return AppBar(
@@ -197,8 +174,8 @@ class HomeView extends StatelessWidget {
       ),
       centerTitle: true,
       backgroundColor: Colors.black,
-      leading: IconButton(
-          onPressed: () {}, icon: Icon(Icons.menu), color: Colors.white),
+      // leading: IconButton(
+      //     onPressed: () {}, icon: Icon(Icons.menu), color: Colors.white),
       actions: [
         IconButton(
           onPressed: () {},
