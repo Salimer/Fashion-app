@@ -16,8 +16,8 @@ class ProductFiltersWidget extends StatelessWidget {
   final double rowGap = 10;
 
   final bool isSelected = false;
-  void onFilterSelected(int index) {
-    print('Selected filter: ${filterLabels[index]}');
+  void onFilterSelected(String index) {
+    print('Selected filter: $index');
   }
 
   @override
@@ -40,7 +40,7 @@ class ProductFiltersWidget extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              onSelected: (index) => {},
+              onSelected: (isSelected) => {onFilterSelected(label)},
             ),
           ),
       ]),
